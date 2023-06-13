@@ -23,7 +23,7 @@ jobs:
 
       - name: Replace PDF
         run: |
-          rm -f rian-rahman-resume.pdf
+          rm -f ./rian-rahman-resume.pdf || true
           mv rian-rahman-resume.pdf ./rian-rahman-resume.pdf
 
       - name: Configure Git
