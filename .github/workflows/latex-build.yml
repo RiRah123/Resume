@@ -25,8 +25,13 @@ jobs:
           pdflatex -interaction=nonstopmode -halt-on-error rian-rahman-resume.tex
           mv rian-rahman-resume.pdf Resume.pdf
 
-      - name: Update PDF in repository
-        uses: actions/upload-artifact@v2
-        with:
-          name: Resume PDF
-          path: Resume.pdf
+      - name: Configure Git
+        run: |
+          git config user.name "Your Name"
+          git config user.email "your.email@example.com"
+
+      - name: Commit and Push Changes
+        run: |
+          git add Resume.pdf
+          git commit -m "Update Resume.pdf"
+          git push
