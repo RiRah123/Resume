@@ -24,7 +24,7 @@ jobs:
       - name: Replace PDF
         run: |
           if [ -f ./rian-rahman-resume.pdf ]; then rm ./rian-rahman-resume.pdf; fi
-          mv ./rian-rahman-resume.tex ./rian-rahman-resume.pdf
+          mv ./rian-rahman-resume.pdf ./rian-rahman-resume.pdf
 
       - name: Configure Git
         run: |
