@@ -18,11 +18,16 @@ jobs:
       - name: Install LaTeX dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended
+          sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended poppler-utils
 
       - name: Build PDF
         run: |
           pdflatex -interaction=nonstopmode -halt-on-error rian-rahman-resume.tex
+
+      - name: Convert PDF to PNG
+        run: |
+          mkdir -p png
+          pdftoppm -png rian-rahman-resume.pdf png
 
       - name: Configure Git
         run: |
@@ -32,5 +37,6 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add rian-rahman-resume.pdf
-          git commit -m "Update rian-rahman-resume.pdf"
+          git add png/00001.png  # Replace with the desired PNG filename
+          git commit -m "Update rian-rahman-resume.pdf and PNG"
           git push
