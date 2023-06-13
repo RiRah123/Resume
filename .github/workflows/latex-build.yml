@@ -23,7 +23,6 @@ jobs:
       - name: Build PDF
         run: |
           pdflatex -interaction=nonstopmode -halt-on-error rian-rahman-resume.tex
-          mv rian-rahman-resume.pdf Resume.pdf
 
       - name: Configure Git
         run: |
@@ -32,6 +31,6 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add Resume.pdf
+          git add rian-rahman-resume.pdf
           git commit -m "Update Resume.pdf"
           git push
