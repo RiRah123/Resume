@@ -37,6 +37,8 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add rian-rahman-resume.pdf
-          git add png/00001.png  # Replace with the desired PNG filename
+          if [ -f "png/00001.png" ]; then
+            git add png/00001.png
+          fi
           git commit -m "Update rian-rahman-resume.pdf and PNG"
           git push
