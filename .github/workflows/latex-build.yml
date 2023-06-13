@@ -32,5 +32,5 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add rian-rahman-resume.pdf
-          git commit -m "Update Resume.pdf"
+          git commit -m "Update rian-rahman-resume.pdf"
           git push
