@@ -36,8 +36,8 @@
 \addtolength{\oddsidemargin}{-0.8in}
 \addtolength{\evensidemargin}{-0.8in}
 \addtolength{\textwidth}{1.7in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.8in}
 
 \urlstyle{same}
 
@@ -47,7 +47,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-7pt}\scshape\raggedright\large\normalsize % Use \normalsize for a medium font size
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -56,7 +56,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item\small{ % Use \footnotesize to make the item a bit smaller
     {#1 \vspace{-2pt}}
   }
 }
@@ -76,10 +76,10 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+\newcommand{\resumeSubSubheadingOneLine}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small{#1} & #2 \\ % Adjust the font size here
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -98,7 +98,7 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\huge \scshape Rian Rahman} \\ \vspace{1pt}
+    \textbf{\large \scshape Rian Rahman} \\ \vspace{.05pt}
     {\small (470) 301-3035 $|$ \href{mailto:rian.rahman@gatech.edu}{\underline{rian.rahman@gatech.edu}} $|$ 
     \href{https://linkedin.com/in/rian-rahman02}{\underline{linkedin.com/in/rian-rahman02}} $|$
     \href{https://github.com/RiRah123}{\underline{github.com/RiRah123}} $|$
@@ -109,56 +109,69 @@
 \vspace{-20pt} % Adjust the value to decrease the spacing
 
 %-----------EDUCATION-----------
+\vspace{10pt} % Add 10 points of vertical space
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Bachelor of Science Degree in Computer Science, GPA: 3.88}{Expected Graduation: May 2025}
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Georgia Institute of Technology}{Atlanta, GA}
+    {Bachelor of Science Degree in Computer Science, GPA: 3.89}{Expected Graduation: December 2024}
+    \small{\item{
+        \textbf{Relevant Coursework}{: Data Structures \& Algorithms, Artificial Intelligence, Computer Architecture, Information Visualization, Software Development, Objects \& Design, Systems Programming, Data Manipulation, Probability \& Statistics, Human Computer Interaction} \\
+    }}
+\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
+  
+    \resumeSubSubheadingOneLine
+        {\textbf{SLB} $|$ \emph{Engineering Project Lead for Capstone Project}}{\emph{September 2023 -- Present}}
+        \resumeItemListStart
+            \resumeItem{Leading a team of five in designing an application that will reduce the manual analysis time for tool health assessments and qualifications in oil drilling fields, simplifying the process from 1 to 2 days to under 30 minutes}
+        \resumeItemListEnd
 
-    \resumeSubheading
-      {HP Inc.}{Fort Collins, CO}
-      {Software Engineer Intern}{May 2023 -- Present}
-      \resumeItemListStart
-        \resumeItem{Implementing a browsable graph visualization that enables users to seamlessly comprehend the intricate connections among 20,000+ HP-related API entities spanning across 15 distinct types}
-        \resumeItem{Deploying the graph on the global hp.dev catalog site, which delivers significant time savings for $\sim$7,000 employees by eliminating the need for manual searches of entity relations across multiple catalogs}
-        \resumeItem{Utilizing React, TypeScript, and Highcharts for the dynamic UI and employing GraphQL to query data from HP's API catalog backend}
-        \resumeItem{Leading demos of the visualization to managers during sprints, using Scrum to assess their needs and achieve stakeholder satisfaction}
+    \resumeSubSubheadingOneLine
+        {\textbf{Grandstage} $|$ \emph{Software Engineer Intern}}{\emph{August 2023 -- Present}}
+        \resumeItemListStart
+            \resumeItem{Expediting the migration of Grandstage's web application from Flutter to Next.js, resulting in an optimized UI that integrates AI to reduce social media content creation time by 75\%\ (under 20 minutes daily) across companies of 10 to 200 employees}
+            \resumeItem{Streamlining Figma mockups and ML algorithms, saving partner companies \$15,000 by better content suggestions and personalized assets \\}
+        \resumeItemListEnd
+  
+    \resumeSubSubheadingOneLine
+        {\textbf{HP Inc.} $|$ \emph{Software Engineer Intern}}{\emph{May 2023 -- Present}}
+        \resumeItemListStart
+            \resumeItem{Implementing a React.js graph visualization for easy exploration of 140,000 API entities spanning 15 types from HP's GraphQL backend}
+            \resumeItem{Deploying the graph on the hp.dev site with automated maintenance under LaunchDarkly, which delivers a time reduction of $\sim$85\%\ for 7,000 employees by eliminating manual searches of entity relations across multiple catalog entries}
+            \resumeItem{Driving demos of the visualization to a 35-employee team during sprints, using Scrum to assess needs and achieve stakeholder satisfaction}
+            \resumeItem{Rank 2nd out of 80 global interns, earning the Technical Impact Award for a forward-thinking project shaping HP's future technology}
+        \resumeItemListEnd
+        
+    \resumeSubSubheadingOneLine
+        {\textbf{Georgia Institute of Technology’s Vertically Integrated Project} $|$ \emph{Research Assistant}}{\emph{January 2022 -- December 2022}}
+        \resumeItemListStart
+            \resumeItem{Applied TensorFlow, NumPy, and OpenCV to develop an AI facial recognition algorithm for robotic blimps, enhancing their maneuvering}
+            \resumeItem{Incorporated a Raspberry Pi in the blimp, allowing data parsing from the facial recognition system and secure uploading to an SSH server}\\
+            \resumeItem{Designed a Python to MATLAB GUI interface that effectively utilized complex deep learning techniques, improving the blimp's pathfinding by 30\%\ in terms of image quality and accuracy of detection}
+            \resumeItem{Facilitated with eight teammates to successfully deploy a blimp that broadcasted a Georgia Tech basketball game to $\sim$1,000 people}
+        \resumeItemListEnd
+
+    \resumeSubSubheadingOneLine
+        {\textbf{NCR Corporation} $|$ \emph{Software Engineer Intern}}{\emph{May 2022 - August 2022}}
+        \resumeItemListStart
+            \resumeItem{Revamped NCR's consumer data with streamlined response/request formats by building robust RESTful APIs in Go and Spring Boot}
+            \resumeItem{Developed a Next.js RBAC dashboard, offering internal management for 60+ million GraphQL APIs for 100+ partner organizations}
+            \resumeItem{Empowered users to edit 50+ templates from NCR's Digital Receipt services by integrating an HTML viewer onto the dashboard}
+            \resumeItem{Transformed complex API data into actionable insights with 16 Chart.js visualizations, allowing performance assessment of top 10 organizations, enterprise units, and endpoints}
+            \resumeItem{Ensured seamless integration and optimal dashboard performance by assisting its deployment on the Google Cloud Platform with GitOps}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Georgia Institute of Technology’s Vertically Integrated Project Program}{Atlanta, GA}
-      {Research Assistant}{January 2022 -- December 2022}
-      \resumeItemListStart
-        \resumeItem{Applied TensorFlow, NumPy, and OpenCV to develop an AI-powered facial recognition algorithm for miniature robotic blimps and autonomous underwater vehicles, significantly enhancing their maneuvering capabilities}
-        \resumeItem{Incorporated a Raspberry Pi in the blimp, allowing data parsing from the facial recognition system and secure uploading to an SSH server}\\
-        \resumeItem{Designed a Python to MATLAB GUI interface that effectively utilized complex deep learning techniques, improving the blimp's pathfinding by 30\%\ in terms of image quality and accuracy of detection}
-        \resumeItem{Facilitated with eight teammates to successfully deploy a blimp that broadcasted a Georgia Tech basketball game to $\sim$1,000 people}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {NCR Corporation}{Atlanta, GA}
-      {Software Engineer Intern}{May 2022 -- August 2022}
-      \resumeItemListStart
-        \resumeItem{Revamped NCR's consumer data with streamlined response/request formats by building robust RESTful APIs in Go and Spring Boot}
-        \resumeItem{Developed an intuitive RBAC configuration dashboard in Next.js for NCR's Business Platform, offering internal management for 60+ million GraphQL APIs utilized by 100+ partner organizations}
-        \resumeItem{Empowered users to edit 50+ templates from NCR's Digital Receipt services by integrating an HTML viewer onto the dashboard}
-        \resumeItem{Transformed complex API data into actionable insights with 16 Chart.js visualizations, allowing performance assessment of top 10 organizations, enterprise units, and endpoints}
-        \resumeItem{Ensured seamless integration and optimal dashboard performance by assisting its deployment on the Google Cloud Platform with GitOps}
-      \resumeItemListEnd
-
-    \resumeSubheading
-    {University of Georgia’s Computer Science Department}{Athens, GA}
-    {Teaching Assistant}{June 2021 -- December 2021}
-    \resumeItemListStart
-      \resumeItem{Delivered in-depth feedback on weekly Java labs, guiding $\sim$110 students in mastering core programming concepts over two semester}
-      \resumeItem{Contributed to 12 Java assignment evaluation tools, significantly reducing grading time of student submissions to under three seconds}
-    \resumeItemListEnd
+    \resumeSubSubheadingOneLine
+        {\textbf{University of Georgia’s Computer Science Department} $|$ \emph{Teaching Assistant}}{\emph{June 2021 -- December 2021}}
+        \resumeItemListStart
+            \resumeItem{Delivered in-depth feedback on weekly Java labs, guiding $\sim$110 students in mastering core programming concepts over two semesters}
+            \resumeItem{Contributed to 12 Java assignment evaluation tools, significantly reducing the grading time of student submissions to under three seconds}
+        \resumeItemListEnd
 
 
   \resumeSubHeadingListEnd
@@ -167,22 +180,22 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-        \resumeProjectHeading
-          {\textbf{NCR Go} $|$ \emph{React Native, MongoDB, Python, Microsoft Azure, OpenCV}}{\href{https://github.com/RiRah123/NCR-Go}{\underline{github.com/RiRah123/NCR-Go}}}
+        \resumeSubSubheadingOneLine
+          {\textbf{NCR Go} $|$ \emph{React Native, JavaScript, MongoDB, Python, Microsoft Azure, OpenCV}}{\href{https://github.com/RiRah123/NCR-Go}{\underline{github.com/RiRah123/NCR-Go}}}
           \resumeItemListStart
             \resumeItem{Spearheaded the development of a React Native application with six teammates that leverages computer vision technology to revolutionize the shopping experience by accurately detecting product availability and providing in-store location information}
             \resumeItem{Connected a neural network to the frontend of the application, optimizing the classification of in-store product images to achieve $\sim$94\%\ accuracy and organizing inventory data in a MongoDB cluster}
-            \resumeItem{Recognized as top 10 of 401 teams for NCR's Global Hackathon and secured a patent by presenting to the Executive Leadership Team}
+            \resumeItem{Recognized as the top 10 of 401 teams for NCR's Global Hackathon and secured a patent by presenting to the Executive Leadership Team \\}
           \resumeItemListEnd
 
-        \resumeProjectHeading
-          {\textbf{mfChess} $|$ \emph{React, TypeScript, MongoDB, Google Authenticator, WebSocket}}{\href{https://github.com/mfChess}{\underline{github.com/mfChess}}}
+        \resumeSubSubheadingOneLine
+          {\textbf{mfChess.com} $|$ \emph{React, TypeScript, MongoDB, Google Authenticator, WebSocket}}{\href{https://github.com/mfChess}{\underline{github.com/mfChess}}}
           \resumeItemListStart
             \resumeItem{Collaborated with four teammates to devise mfChess, a deployed React application that enhances the user experience in online chess by implementing faster matchmaking, real-time, in-depth Stockfish-powered analysis, and game-hosting capabilities for 10+ players}
             \resumeItem{Integrated the site with the WebSocket protocol to efficiently preserve user states and game statistics across 25+ sessions, leading to heightened user collaboration and engagement}
           \resumeItemListEnd
           
-      \resumeProjectHeading
+      \resumeSubSubheadingOneLine
           {\textbf{EatCode} $|$ \emph{React, MongoDB, Express.js, TypeScript, Java, Python, Docker}}{\href{https://github.com/RiRah123/EatCode}{\underline{github.com/RiRah123/EatCode}}}
           \resumeItemListStart
             \resumeItem{Engaged with seven teammates to build a software engineering technical training website in React, enabling users to enhance their learning experience in data structures and algorithms with 100+ questions supported in five programming languages}
@@ -197,11 +210,11 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-        \textbf{Languages}{: Java, Python, C, C++, JavaScript, TypeScript, HTML/CSS, SQL, GraphQL} \\
-        \textbf{Frameworks/Libraries}{: React, Next.js, Node.js, React Native, D3.js, Spring Boot, Material UI, NumPy, Pandas, Matplotlib, Beautiful Soup} \\
-        \textbf{Developer Tools}{: Jira, Azure, AWS, Postman, Figma, Linux/Unix, Git, Docker, Kubernetes, MongoDB, Google Cloud, Notion, LaTeX} \\
-        \textbf{Concepts}{: Agile Development Process, Data Structures \& Algorithms, RESTful APIs, Human-Computer Interaction, UI Design, Data Visualization, Software Development, Object-oriented Programming, Artificial Intelligence, Cloud Computing, Computer Architecture, UML}}}
-\end{itemize}
+        \textbf{Languages}{: Java, Python, C, C++, JavaScript, TypeScript, HTML/CSS, SQL, GraphQL, x86-64 Assembly} \\
+        \textbf{Frameworks/Libraries}{: Spring Boot, React, Next.js, Node.js, React Native, D3.js, Material UI, NumPy, Pandas, Matplotlib, Beautiful Soup} \\
+        \textbf{Developer Tools}{: Google Cloud, AWS, Azure, Jira, Postman, Figma, Linux/Unix, Git, Docker, Kubernetes, MongoDB, Elasticsearch} \\
+        \textbf{Concepts}{: Agile Development Process, RESTful APIs, UI/UX Design, Computer Network Design, Database Management, Object-oriented Programming, Cloud Computing}}
+\end{itemize}}
 
 
 
